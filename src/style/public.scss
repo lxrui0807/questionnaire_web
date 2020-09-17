@@ -1,0 +1,190 @@
+/*
+* @Author: NiceMing
+* @Date:   2018-03-06 19:29:50
+*/
+$white: #fff;
+$orange: #8ca583;
+$deep-orange: #8ca583;
+$light-orange: #fafafa;
+// $orange: #409eff;
+// $deep-orange: #228fff;
+// $light-orange: #c9e4ff;
+$deep-red: #f56c6c;
+$light-red: #fef0f0;
+
+$light-green: #7abd2e;
+$font-color: #303133;
+
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin wrap-background {
+	border-radius: 5px;
+	background-color: $white;
+	box-shadow: 0 0 5px #ccc;
+}
+
+@mixin add-btn {
+	cursor: pointer;
+	color: $white;
+	border: 1px solid #7abd2e;
+	border-radius: 5px;
+	background-color: #7abd2e;
+}
+
+@mixin nomal-btn {
+	span {
+		display: inline-block;
+//		width: 7.5rem;
+		height: 2.5rem;
+		font-size: 1.2rem;
+		line-height: 2.5rem;
+		cursor: pointer;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		background-color: $white;
+
+		&:hover {
+			border-color: $deep-orange;
+			background-color: #f7f5f5;
+		}
+
+	}
+
+}
+
+@mixin check-icon {
+	i {
+		display: inline-block;
+		box-sizing: border-box;
+		width: 1.2rem;
+		height: 1.2rem;
+		border: 1px solid #999;
+		border-radius: 50%;
+		background-color: #eee;
+
+		&.checked {
+			border: .4rem solid $orange;
+		}
+
+	}
+
+}
+
+.show {
+	display: block;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .2);
+
+	.prompt-box {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 32rem;
+		transform: translate(-50%, -50%);
+		@include wrap-background();
+
+		header {
+			display: flex;
+			height: 4rem;
+			padding: 0 2rem;
+			font-weight: 700;
+			line-height: 4rem;
+			background-color: #f2f2f2;
+			justify-content: space-between;
+
+			a {
+				color: #555;
+
+				&:hover {
+					color: $orange;
+				}
+
+			}
+
+		}
+
+		p {
+			padding: 3rem 2rem 4rem 2rem;
+		}
+
+		footer {
+			text-align: center;
+			margin-bottom: 1rem;
+			@include nomal-btn;
+
+			span {
+				width: 7rem;
+				margin: .5rem;
+
+				&:nth-of-type(1) {
+					color: #fff;
+					border-color: $deep-orange;
+					background-color: $orange;
+				}
+
+				&:nth-of-type(2) {
+					color: $font-color;
+					background-color: #fff;
+					&:hover {
+						border-color: #ccc;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.el-button--primary {
+    background-color: #7abd2e;
+    border: none;
+    color: #FFF !important;
+}
+.el-button--primary:focus, .el-button--primary:hover,.el-button--primary:active{
+    background-color: #70b126;
+    border: none;
+    color: #FFF !important;
+}
+.el-button--primary.is-plain {
+    color: #7abd2e !important;
+    background: #f1f8ea;
+    border-color: #7abd2e !important;
+}
+.el-button--primary.is-plain:active,.el-button--primary.is-plain:focus, .el-button--primary.is-plain:hover {
+    background: #7abd2e;
+    border-color: #7abd2e !important;
+    color: #FFF !important;
+}
+.el-button:active,.el-button:hover{
+    border-color: #7abd2e !important;
+    color: #7abd2e;
+}
+.el-button--danger.is-plain:focus, .el-button--danger.is-plain:hover{
+    border: none !important;
+}
+.el-switch.is-checked .el-switch__core {
+    border-color: #7abd2e;
+    background-color: #7abd2e;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #7abd2e;
+    color: #FFF;
+}
+.el-button--warning.is-plain:focus, .el-button--warning.is-plain:hover{
+    border-color: #E6A23C !important;
+}

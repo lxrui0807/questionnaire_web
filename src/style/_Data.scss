@@ -1,0 +1,639 @@
+/*
+* @Author: NiceMing
+* @Date:   2018-03-11 15:26:02
+*/
+@import './public.scss';
+@import './_Edit.scss';
+
+.qu-content {
+    display: flex;
+    flex-direction: row;
+//  .leftColumn{
+//      width: 10%;
+//      background-color: #fff;
+//      position: fixed;
+//      bottom: 0;
+//      top: 12.4rem;
+//      overflow: auto;
+//      
+//      .current{
+//          display: flex;
+//          flex-direction: column;
+//          justify-content: space-around;
+//          border: 1px solid #eee;
+//          margin:1rem 2rem 0;
+//          p{
+//              width: 90%;
+//              padding: 1rem;
+//              background-color: #fff;
+//              text-align: center;
+//          }
+//          p.active{
+//              color: #fff;
+//              background-color: #479de6;
+//          }
+//      }
+//  }
+    .centerColumn{
+        width: 100%;
+        left: 10%;
+        position: inherit;
+        padding:1rem 0;
+        overflow: inherit;
+        .recovery-survey{
+            width: 70%;
+            margin: 0 auto;
+            header{
+                 font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                padding-left: 0.5rem; 
+                p{
+                    span{
+                            padding: 0.3rem 0.5rem;
+                            line-height: 20px;
+                            font-size: 12px;
+                            -webkit-box-shadow: 0 0 0 1px #bbb;
+                            box-shadow: 0 0 0 1px #bbb;
+                            border-radius: 20px;
+                    }
+                }
+             }
+             
+             .surveyBox{
+                width: 100%;
+                height: 520px;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+                .survey{
+                    height: 100%;
+                    padding: 30px;
+                    margin: 0 20px 20px 0;
+                    box-sizing: border-box;
+                    background-color: #ffffff;
+                    border-radius: 4px;
+                }
+                
+                .survey-line{
+                    width: 60%;
+                    
+                    ul{
+                        overflow: hidden;
+                        li{
+                            list-style: none;
+                            float: left;
+                            margin-right: 40px;
+                            text-align: center;
+                            h4{
+                                color: #333333;
+                                font-weight: normal;
+                                font-size: 14px;
+                                margin: 0;
+                                padding: 0;
+                            }
+                            p{
+                                margin-top: 15px;
+                                font-size: 32px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+                .survey-map{
+                    width: 40%;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    .region-table{
+                        width: 100%;
+                        margin-top: 10px;
+                         table{
+                            width: 100%;
+                            text-align: center;
+                            td{
+                                width: 1%;
+                                font-size: 14px;
+                            }
+                            thead{
+                                tr{
+                                    border-top-left-radius: 4px;
+                                    th{
+                                        text-align: center;
+                                        color: #fff;
+                                        font-weight: bold;
+                                        padding: 4px 0;
+                                        border-left: 1px solid #fff;
+                                        background-color: #479de6;
+                                    }
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    td{
+                                        padding: 5px 0;
+                                        font-size: 12px;
+                                        border-left: 1px solid #fff;
+                                        border-bottom: 1px solid #fff;
+                                        background-color: #eee;     
+                                    }
+                                }
+                            }
+                         }
+                    }
+                }
+                .survey-system{
+                    width: 60%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    
+                    .survey-pie{
+                        width: 50%;
+                        .equipmenType{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-around;
+                            p{
+                                text-align: center;
+                                .equipmenType-img img{
+                                    width: 25px;
+                                    height: 25px;
+                                    display: block;
+                                    margin: 0 auto;
+                                }
+                                .equipmenType-name{
+                                    font-size: 12px;
+                                    display: block;
+                                    margin: 5px 0;
+                                }
+                                .equipmenType-num{
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .survey-systempie{
+                        margin: 0;
+                        .equipmenType{
+                            justify-content: space-between;
+                        }
+                    }
+                }
+                
+                .survey-pie.channel{
+                    width: 40%;
+                    margin-left:20px;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    ul li{
+                        width: 85%;
+                        padding: 5px;
+                        span{
+                            display: inline-block;
+                        }
+                       .channelPie-name{
+                           width: 70%;
+                       } 
+                       .channelPie-num{
+                           width: 10%;
+                       }
+                    }
+                }
+             }
+             
+             .qu-title-info{
+                 color: #a9a9a9;
+                 font-size: 12px;
+             }
+             
+        }
+        .statisticschart.statisticschart{
+            width: 100%;
+        }
+         
+        .qu-container{
+            margin: 1.5rem;
+            padding: 1rem 2.5rem;
+            background-color: #fff;
+             ul .percentBar{
+                    position: relative;
+                    width: 90%;
+                    height: 40px;
+                    margin-top: 15px;
+                    box-shadow: 0px 3px 8px 0px rgba(224, 229, 236, 0.4);
+                    border-radius: 4px;
+                    background-color: #fff;
+                    overflow: hidden;
+                    .percentBar-bg{
+                        position: relative;
+                        height: 100%;
+                        box-sizing: border-box;
+                        border: 1px solid #e1e7f2;
+                        border-radius: 4px;
+                        .percentBar-name {
+                            color: #000;
+                            line-height: 40px;
+                            display: inline-block;
+                            position: absolute;
+                            left: 20px;
+                            right: 200px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                        .percentBar-count {
+                            color: #000;
+                            line-height: 40px;
+                            position: absolute;
+                            right: 35px;
+                        }
+                        .percentBar-rate{
+                            color: #000;
+                            line-height: 40px;
+                            position: absolute;
+                            right: 20px;
+                        }
+                    }
+                    .imgChose-list{
+                        height: 100%;
+                        box-sizing: border-box;
+                        border: 1px solid #e1e7f2;
+                        border-radius: 4px;
+                        .imgChose-option {
+                            color: #000;
+                            line-height: 40px;
+                            display: inline-block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            float: left;
+                            width: 80%;
+                            padding: 3px 0 3px 20px;
+                            p{
+                                display: inline-block;
+                                height: 30px;
+                                overflow: hidden;
+                                img{
+                                    width: 35px;
+                                    height: 30px;
+                                    vertical-align: middle;
+                                    padding-right: 15px;
+                                }
+                            }
+                            
+                        }
+                        .percentBar-count {
+                            color: #000;
+                            line-height: 40px;
+                            position: absolute;
+                            right: 35px;
+                        }
+                    }
+                    .percentBar-get {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        background-color: #008fff;
+                        transition: 0.6s ease;
+                        overflow: hidden;
+                        .percentBar-get-cont {
+                            position: relative;
+                            height: 100%;
+                            .percentBar-name {
+                                color: #000;
+                                line-height: 40px;
+                                display: inline-block;
+                                position: absolute;
+                                left: 20px;
+                                right: 200px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .percentBar-count {
+                                color: #000;
+                                line-height: 40px;
+                                position: absolute;
+                                right: 96px;
+                            }
+                            .percentBar-rate{
+                                color: #000;
+                                line-height: 40px;
+                                position: absolute;
+                                right: 20px;
+                            }
+                        }
+                    }
+                }
+         }
+        .qu-item {
+            display: flex;
+            margin: 1.5rem;
+            padding: 0.5rem;
+            background-color: #fff;
+            
+            .option-head{
+                padding: 0 20px;
+                width: 100%;
+                .title{
+                    width: 100%;
+                    display: inline-block;
+                    height: 60px;
+                    font-size: 16px;
+                    line-height: 60px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    color: #333333;
+                    border-bottom: 1px solid #e1e7f2;
+                }
+                .option-body{
+                    width: 80%;
+                    margin: 1rem 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    div{
+                        span{
+                            padding-right: 1rem;
+                        }
+                    }
+                    .date-part{
+                        width: 60%;
+                        float: left;
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        input {
+                            display: inline-block;
+                            box-sizing: border-box;
+                            padding: 1rem 2rem;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+                            outline: none;
+                        }
+                    }
+                    .recovery-geo{
+//                       float: left;
+                         margin: 0rem 0 1rem 2rem;
+                        select{
+                            display: inline-block;
+                            box-sizing: border-box;
+                            padding: 1rem 2rem;
+                            margin: 0 1rem;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+                            outline: none;
+                        }
+                        input{
+                            display: inline-block;
+                            box-sizing: border-box;
+                            padding: 1rem 2rem;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                            border: 1px solid #ccc;
+                            outline: none;
+                        }
+                        .el-input{
+                            width: auto;
+                        }
+                    }
+                }
+                .option-footer{
+                    width: 100%;
+                    height: 45px;
+                    line-height: 45px;
+                    box-sizing: border-box;
+                    color: #333333;
+                    border-top: 1px solid #e1e7f2;
+                    margin-top: 1.5rem;
+                    clear: both;
+                }
+            }
+            
+            
+    
+            &:hover {
+                background-color: #fff;
+            }
+    
+            .qu-data, .ans-data {
+                display: flex;
+                flex-direction: column;
+    
+                & > * {
+                    height: 2rem;
+                }
+    
+                .echart {
+                    height: 20rem;
+                }
+    
+            }
+    
+            .qu-data {
+                flex: 3;
+    
+                p {
+                    margin: 1rem 0 0 4rem;
+                }
+                
+                
+            }
+    
+            .ans-data {
+                flex: 2;
+    
+                .outerBar {
+                    position: relative;
+                    width: 20rem;
+                    height: 1.2rem;
+                    margin: 1.6rem 0 0 0;
+                    font-size: 1.2rem;
+                    border: 1px solid #ccc;
+                }
+    
+                .innerBar {
+                    display: block;
+                    width: 0;
+                    height: 100%;
+                    background-color: $orange;
+                    transition: width .5s;
+                }
+    
+                .scaleNum {
+                    position: absolute;
+                    top: 0;
+                    right: -4rem;
+                }
+    
+            }
+        }
+        .question-head{
+            margin: 0 1.5rem;
+            padding: 1.5rem;
+            background-color: #fff;  
+            text-align: right;
+            button{
+                cursor: pointer;
+                height: 40px;
+                padding: 0 1rem;
+                background-color: #fff;
+                border: 1px solid #e1e7f2;
+            } 
+        }
+        .qu-item.question-table{
+            display:block;
+            height: 300px;
+            padding: 1.5rem;
+            margin: 0 1.5rem 1.5rem;
+            table{
+                height: 100%;
+            }
+            .right-div {
+              flex: 1;
+              overflow: scroll;
+            }
+//          .left-div {
+//            overflow: hidden;
+//            .left-td{
+//                  cursor: pointer;
+//                  color: blueviolet
+//            }
+//          }
+            td,
+            th {
+              text-align: center;
+              min-width: 300px;
+              height: 60px;
+              border-left: 1px solid #999;
+            }
+             
+            th{
+              color: blue
+            }
+             
+            table thead,
+            tbody tr {
+              display: table;
+              table-layout: fixed;
+              border-bottom: 1px solid rebeccapurple;
+            }
+            thead {
+              height: 60px;
+              background-color: #eee;
+              border-top: 1px solid #999;
+            }
+            tbody {
+//            height: 720px;
+              display: block;
+//            overflow: scroll;
+            }
+        }
+        .content-table{
+            padding-left: 15px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            .left-div {
+                width: 122px;
+                float: left;
+                
+                .left-div1 {
+                    width: 100%;
+                }
+                .left-div2 {
+                    width: 100%;
+                    height: 300px;
+                    overflow: hidden;
+                    
+                    .left-table2{
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+            .right-div{
+                float: left;
+                width: 1560px;
+                margin-left: -1px;
+                .right-div1 {
+                    width: 100%;
+                    overflow: hidden;
+                    .right-table1{
+                        width: 2000px;
+                        max-width: 3000px;
+                        min-width: 2000px;
+                    }
+                }
+                .right-div2 {
+                    width: 100%;
+                    height: 300px;
+                    overflow: auto;
+                    
+                    .right-table2{
+                        width: 2000px;
+                        max-width: 3000px;
+                        min-width: 2000px;
+                        overflow: hidden;
+                    }
+                }
+            }
+            table {
+              border-collapse: collapse;
+              margin: 0 auto;
+              width: 100%;
+              border-spacing: 0;
+              font-size: 13px;
+            }
+            th {
+              height: 40px;
+              width: 100px;
+              line-height: 40px;
+              text-align: left;
+              border-left: 1px solid #999;
+              background: #d9d9d9;
+            }
+            td {
+              word-break: break-all;
+              word-wrap: break-word;
+              width: 100px;
+              height: 30px;
+              line-height: 30px;
+              text-indent: 20px;
+              border-left: 1px solid #999;
+            }
+            tr {
+              border-top: 1px solid #999;
+            }
+            table tr:nth-child(odd) {
+              background: #fff;
+            }
+            table tr:nth-child(even) {
+              background: #d9d9d9;
+            }
+        }
+    }
+
+}
+.qu-wrap,.qu-content .centerColumn{
+    background:none !important;
+    box-shadow: none;
+}
+.qu-wrap>footer{
+    text-align: left;
+}
+
+#backBtn {
+  width: 8rem;
+  height: 3rem;
+//margin: 0 auto;
+  line-height: 3rem;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  @include add-btn;
+}

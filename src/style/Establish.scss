@@ -1,0 +1,108 @@
+/*
+* @Author: 张瑞
+* @Date:   2020-01-16
+*/
+.establish_content {
+	width: 100%;
+	height: 93%;
+	color: #555;
+	.establish_title{
+	    width: 100%;
+	    height: 440px;;
+	    color: #94a374;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    .temp1{
+	        flex: 1;
+            text-align: center;
+	        background-color: #f0f6ef;
+	        .type_show{
+                background-image: url(../assets/sprites_bg1.png);
+                background-repeat: no-repeat;
+                width: 240px;
+                height: 162px;
+          }
+	    }
+	    .temp2{
+	        flex: 1;
+            text-align: center;
+            background-color: #e9f2e9;
+          .type_show{
+                background-image: url(../assets/sprites_bg2.png);
+                background-repeat: no-repeat;
+                width:240px;
+                height: 162px;
+          }
+      }
+      .type_show{
+            margin: 30px auto 25px;
+      }
+      h2{
+          color: #505f4a;
+          font-size: 3rem;
+          padding-bottom: 8px;
+      }
+      h3{
+          font-size: 1.5rem;
+          padding-bottom: 22px;
+      }
+      a{
+          width: 105px;
+          height: 45px;
+          line-height: 45px;
+          color: #fff;
+          font-size: 16px;
+          display: inline-block;
+          background-color: #8cc63f;
+          border-radius: 3px;
+          border-color: rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+      }
+	}
+	.establish_template{
+        height: 50%;
+        max-width: 1200px;
+        min-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 36px 20px 0;
+        box-sizing: border-box;
+        position: relative;
+        h2{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            padding: 1.5rem 0;
+            border-bottom: 1px dashed #8cc63f47;
+        }
+        .row{
+            padding: 1rem 4rem;
+            ol{
+                list-style: decimal;
+                li{
+                    position: relative;
+                    padding: 1rem 0;
+                    i{
+                        margin-right: 10px;
+                    }
+                    .title{
+                       color: #333; 
+                    }
+                    .title:hover{
+                        cursor: pointer;
+                        color: rgba(71, 157, 230, 0.97); 
+                    }
+                    .ext{
+                        position: absolute;
+                        right: 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+

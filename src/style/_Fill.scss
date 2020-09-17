@@ -1,0 +1,118 @@
+/*
+* @Author: NiceMing
+* @Date:   2018-03-10 13:46:51
+*/
+
+@import './_Edit.scss';
+.container {
+	position: fixed;
+	width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+	overflow: auto;
+}
+
+.qu-wrap {
+	width: 100rem;
+	margin: 5rem auto;
+	padding: 2rem;
+  header {
+        margin: 0 2rem 2rem;
+		overflow: hidden;
+		
+		.paperTitle{
+		    text-align: center;
+		    font-size: 3.5rem;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+		}
+		.paperSubtitle{
+		    font-size: 1.5rem;
+		    text-indent: 2rem;
+		}
+  }
+}
+
+.btn {
+  width: 8rem;
+  height: 3rem;
+  margin: 0 auto;
+  line-height: 3rem;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  @include add-btn;
+}
+.qu-content {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    
+    .qu-item{
+        .qu-topic{
+            font-size: 1.5rem;
+            color: #000;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+	#app {
+		width: 100%;
+	}
+
+	.qu-wrap {
+		width: 100%;
+		margin: 0;
+		padding: 0 2rem;
+
+		header {
+			margin: 0;
+		}
+
+		.qu-content {
+			padding: 0;
+
+			.qu-item {
+				padding: 1rem;
+			}
+		}
+	}
+
+	textarea {
+		width: 80%;
+		border: 1px solid #999;
+	}
+}
+
+    .qu-content {
+//      width: 100%;
+        flex-direction: column;
+        padding: 2rem;
+        border-top: 1px solid #bbb;
+        border-bottom:1px solid #bbb;
+
+        .qu-item {
+            position: relative;
+            margin: 1rem 0;
+            padding: 1rem 2rem;
+            &:hover {
+                background-color: #FAFAFA;
+    
+                .operat-list {
+                    display: flex;
+                }
+    
+                div:last-of-type {
+                    display: none;
+                }
+    
+                #require-check {
+                    display: block;
+                }
+    
+            }
+        }
+    }

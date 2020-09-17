@@ -1,0 +1,42 @@
+/*
+* @Author: 、张瑞
+* @Date:   2020-03-9 
+*/
+
+.container{
+   .qu-content{
+        display: flex;
+        flex-direction: row;
+        .leftColumn{
+            width: 10%;
+            background-color: #fff;
+            .current{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-top: 4rem;
+                p{
+                    padding: 1rem;
+                    background-color: #fff;
+                    text-align: center;
+                }
+                p:hover{
+                    cursor: pointer;
+                    color: #7abd2e;
+                }
+                p.active{
+                    color: #7abd2e;
+                    margin: 1rem 0;
+                }
+            }
+        }
+        .centerColumn{
+            width: 90%;
+            padding: 1rem;
+        }
+        .centerColumn.userBasic{
+            width: 25%;
+            padding: 1rem 6rem !important;
+        }
+   }
+}
